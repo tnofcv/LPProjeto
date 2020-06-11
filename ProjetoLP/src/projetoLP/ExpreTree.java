@@ -67,6 +67,48 @@ public class ExpreTree{
 			return top.treeNode;	
 		}
 	}
-
+	
+    //Função para verificar se é um digito
+    public boolean eDigito(char ch)
+    {
+        return ch >= '0' && ch <= '9';
+    }
+ 
+    ///Função para verificar se é um operador
+    public boolean eOperador(char ch)
+    {
+        return ch == '+' || ch == '-' || ch == '*' || ch == '/';
+    }
+	
+	
+    //Função para avaliar qual a operação a fazer
+    public double avaliaOperacao(NoTree no)
+    {
+        if (no.left == null && no.right == null) {
+            return converterParaDigito(no.dados);
+        
+        }else{
+            
+        	double res = 0.0;
+            double ramoEsquerda = avaliaOperacao(no.left);
+            double ramoDireita = avaliaOperacao(no.right);
+            char operador = no.dados;
+ 
+            switch (operador)  {
+            case '+' : 
+	    res = ramoEsquerda + ramoDireita; 
+	    break;
+            case '-' : 
+	    res = ramoEsquerda - ramoDireita; 
+	    break;
+            case '*' : 
+	    res = ramoEsquerda * ramoDireita; 
+	    break;
+            case '/' :
+	    res = ramoEsquerda / ramoDireita; 
+	    break;
+            }
+            return res;
+        }
 
 }
