@@ -27,14 +27,14 @@ public class ExpreTree{
 		return top==null;
 	}
  
-	//FunÁ„o para limpar a pilha onde s„o guardados os dados
+	//Fun√ß√£o para limpar a pilha onde s√£o guardados os dados
     public void clear()
     {
         top = null;
     }
  
-    //FunÁ„o para adicionar um numero ou operador ‡ pilha
-    private void push(NoTree ptr)
+    //Fun√ß√£o para adicionar um numero ou operador √† pilha
+    public void push(NoTree ptr)
     {
         if (estaVazia())
             top = new PilhaNos(ptr);
@@ -46,8 +46,8 @@ public class ExpreTree{
         }
     }
  
-    //FunÁ„o para remover um numero ou operador da pilha
-    private NoTree pop()
+    //Fun√ß√£o para remover um numero ou operador da pilha
+    public NoTree pop()
     {
         if (top == null)
             throw new EmptyStackException();
@@ -59,7 +59,7 @@ public class ExpreTree{
         }
     }
  
-    //FunÁ„o para olhar para o topo da pilha
+    //Fun√ß√£o para olhar para o topo da pilha
     public NoTree obter() {
 		if(estaVazia()) {
 			throw new EmptyStackException();
