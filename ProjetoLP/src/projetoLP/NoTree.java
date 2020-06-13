@@ -4,7 +4,7 @@ public class NoTree {
      	
 		//ATRIBUTOS
         char dados;
-        NoTree left, right;
+        NoTree esquerda, direita;
 
         //ACESSORES
 		public char getDados() {
@@ -15,27 +15,27 @@ public class NoTree {
 			this.dados = dados;
 		}
 
-		public NoTree getLeft() {
-			return left;
+		public NoTree getEsq() {
+			return esquerda;
 		}
 
-		public void setLeft(NoTree left) {
-			this.left = left;
+		public void setEsq(NoTree esquerda) {
+			this.esquerda = esquerda;
 		}
 
-		public NoTree getRight() {
-			return right;
+		public NoTree getDir() {
+			return direita;
 		}
 
-		public void setRight(NoTree right) {
-			this.right = right;
+		public void setDir(NoTree direita) {
+			this.direita = direita;
 		}
 		//CONSTRUTORES
 
         public NoTree(char dados)
         {
             this.dados = dados;
-            this.left = null;
-            this.right = null;
+            this.esquerda = null;
+            this.direita = null;
         }
 }
