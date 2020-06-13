@@ -5,16 +5,16 @@ public class PilhaNos {
 	
 	//ATRIBUTOS
 	
-	NoTree treeNode;
+	NoTree noArvore;
     PilhaNos proximo;
 
     //ACESSORES
-	public NoTree getTreeNode() {
-		return treeNode;
+	public NoTree getnoArvore() {
+		return noArvore;
 	}
 
-	public void setTreeNode(NoTree treeNode) {
-		this.treeNode = treeNode;
+	public void setnoArvore(NoTree noArvore) {
+		this.noArvore = noArvore;
 	}
 
 	public PilhaNos getProximo() {
@@ -27,11 +27,10 @@ public class PilhaNos {
 	
     //CONSTRUTORES
 	
-	public PilhaNos(NoTree treeNode)
-    {
-        this.treeNode = treeNode;
+	public PilhaNos(NoTree noArvore) {
+        this.noArvore = noArvore;
         proximo = null;
     }
-    
-   
 }
+
+
